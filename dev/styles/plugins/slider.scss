@@ -1,0 +1,149 @@
+
+
+.fix:before, .fix:after {
+    content: " ";
+    display: table;
+}
+
+.fix:after{
+  clear: both;
+}
+
+.slider{
+	position: relative;
+	height: 100%;
+	@extend .fix;
+
+	.slider_wrapper{
+		overflow: hidden;
+		position: relative;
+		height: 100%;
+		font-size: 0;
+
+			> .slide{
+				position: absolute;
+				overflow: hidden;
+				height: 100%;
+				width: 100%;
+				left: 0;
+				top: 0;
+				z-index: 0;
+
+				img{
+					width: 100%;
+				}
+
+				&.-active{
+					position: relative;
+					z-index: 1;
+				}
+			}
+	}
+
+	.slider_next-btn{
+		position: absolute;
+		right: 0;
+		top: 50%;
+		transform: translate(0, -50%);
+		z-index: 100;
+		background: none;
+		border: none;
+		cursor: pointer;
+		height: 50px;
+		width: 50px;
+
+		&:before{
+			content: '';
+			width: 30px;
+			height: 4px;
+			border-radius: 5px;
+			background: #fff;
+			position: absolute;
+			transform: rotate(45deg) translate(-45%, 0);
+			right: 0;
+			top: 50%;
+			box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.5);
+
+		}
+
+		&:after{
+			content: '';
+			width: 30px;
+			height: 4px;
+			border-radius: 5px;
+			background: #fff;
+			position: absolute;
+			transform: rotate(-45deg) translate(-45%, 0);
+			right: 0;
+			top: 50%;
+			box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.5);
+
+		}
+	}
+
+	.slider_prev-btn{
+		position: absolute;
+		left: 0;
+		top: 50%;
+		transform: translate(0, -50%);
+		z-index: 100;
+		background: none;
+		border: none;
+		cursor: pointer;
+		height: 50px;
+		width: 50px;
+
+		&:before{
+			content: '';
+			width: 30px;
+			height: 4px;
+			border-radius: 5px;
+			background: #fff;
+			position: absolute;
+			transform: rotate(45deg) translate(45%, 0);
+			left: 0;
+			top: 50%;
+			box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.5);
+		}
+
+		&:after{
+			content: '';
+			width: 30px;
+			height: 4px;
+			border-radius: 5px;
+			background: #fff;
+			position: absolute;
+			transform: rotate(-45deg) translate(45%, 0);
+			left: 0;
+			top: 50%;
+			box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.5);
+		}
+	}
+
+	.slider_dots{
+		z-index: 100;
+		position: absolute;
+		bottom: 10%;
+		left: 50%;
+		transform: translate(-50%, 0);
+		font-size: 0;
+	}
+
+	.slider_dot-btn{
+		padding: 0;
+		font-size: 0;
+		background: none;
+		width: 12px;
+		height: 12px;
+		border-radius: 50%;
+		border: 2px solid #fff;
+		margin: 0 3px;
+		cursor: pointer;
+		transition: background .2s;
+		box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.5);
+
+		&.-active{
+			background: #fff;
+		}
+	}
+}

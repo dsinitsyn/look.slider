@@ -1,0 +1,55 @@
+@charset "UTF-8";
+
+/* abbey */
+@font-face {
+  font-family: "abbey";
+  src:url("https://file.myfontastic.com/obnCVTCeA6nhN5aquz4HbB/fonts/1478870968.eot");
+  src:url("https://file.myfontastic.com/obnCVTCeA6nhN5aquz4HbB/fonts/1478870968.eot?#iefix") format("embedded-opentype"),
+    url("https://file.myfontastic.com/obnCVTCeA6nhN5aquz4HbB/fonts/1478870968.woff") format("woff"),
+    url("https://file.myfontastic.com/obnCVTCeA6nhN5aquz4HbB/fonts/1478870968.ttf") format("truetype"),
+    url("https://file.myfontastic.com/obnCVTCeA6nhN5aquz4HbB/fonts/1478870968.svg#1478870968") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+[data-icon]:before {
+  font-family: "abbey" !important;
+  content: attr(data-icon);
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  speak: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+[class^="icon-"]:before,
+[class*=" icon-"]:before {
+  font-family: "abbey" !important;
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  speak: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-warning:before {
+  content: "\77";
+}
+.icon-action-arrow:before {
+  content: "\61";
+}
+.icon-arrow-down:before {
+  content: "\62";
+}
+.icon-bars:before {
+  content: "\63";
+}
+.icon-close:before {
+  content: "\64";
+}
